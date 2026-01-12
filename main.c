@@ -16,12 +16,13 @@ int main() {
 
     while (running) {
         char line[1024*4]={0};
-        char ls_call[] = "ls\n";
+        char ls_call[] = "ls";
 
 
 
         printf("Hello→ ");
         fgets(line, 1024*4,stdin);
+        line[strcspn(line, "\n") ]= '\0';
 
 
         pid = fork();
