@@ -4,6 +4,8 @@
 #include <string.h>
 #include <sys/wait.h>
 
+#define INPUT_BUFFER_SIZE (1024 * 4)
+
 
 
 
@@ -15,13 +17,13 @@ int main() {
     int pid = -1;
 
     while (running) {
-        char line[1024*4]={0};
+        char line[INPUT_BUFFER_SIZE]={0};
         char ls_call[] = "ls";
 
 
 
         printf("Hello→ ");
-        fgets(line, 1024*4,stdin);
+        fgets(line, INPUT_BUFFER_SIZE,stdin);
         line[strcspn(line, "\n") ]= '\0';
 
 
