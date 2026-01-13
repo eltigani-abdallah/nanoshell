@@ -3,7 +3,7 @@
 
 #include <string.h>
 #include "ls.h"
-
+#include <stdio.h>
 
 
 void functionSelect(char* input);
