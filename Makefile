@@ -1,5 +1,5 @@
 NAME=Nanoshell
-SRC=main.c src/ls.c
+SRC=main.c src/ls.c src/manager.c
 FLAGS=-Wall -Werror -Wextra
 #FLAGS=-Wall -Werror
 

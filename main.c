@@ -1,8 +1,10 @@
 #include <stdio.h>
-#include "./include/ls.h"
 #include <stdlib.h>
 #include <string.h>
 #include <sys/wait.h>
+
+#include "./include/ls.h"
+#include "./include/manager.h"
 
 #define INPUT_BUFFER_SIZE (1024 * 4)
 
@@ -18,7 +20,7 @@ int main() {
 
     while (running) {
         char line[INPUT_BUFFER_SIZE]={0};
-        char ls_call[] = "ls";
+
 
 
 
@@ -26,15 +28,16 @@ int main() {
         fgets(line, INPUT_BUFFER_SIZE,stdin);
         line[strcspn(line, "\n") ]= '\0';
 
+        if (strcmp(line, "exit")==0) {
+            running = 0;
+        }
+
 
         pid = fork();
 
         if (pid == 0) {
 
-            if (strcmp(ls_call, line) == 0) {
-                printf("%d", pid);
-                ls();
-            }
+            functionSelect(line);
 
             exit(-1);
 
