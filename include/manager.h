@@ -6,7 +6,7 @@
 #include <stdio.h>
 
 
-void functionSelect(char* input);
+void functionSelect(char* function, char* params);
 
 
 
