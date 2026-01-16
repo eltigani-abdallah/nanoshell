@@ -1,4 +1,4 @@
-#include "../include/exec.h"
+#include "../include/Exec.h"
 
 void exec(Command command) {
     //arguments to be passed in to execve function

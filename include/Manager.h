@@ -7,7 +7,7 @@
 #include <unistd.h>
 #include <sys/wait.h>
 
-#include "exec.h"
+#include "Exec.h"
 #include "BuiltIn.h"
 #include "Command.h"
 
