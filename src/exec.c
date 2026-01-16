@@ -1,8 +1,8 @@
-#include "../include/ls.h"
+#include "../include/exec.h"
 
-void ls(char* params) {
+void exec(Command command) {
     //arguments to be passed in to execve function
-    char* argv[]={"ls",params, NULL};
+    char* argv[]={command.function,command.param, NULL};
     char* envp[]={NULL};
 
     //execve("path to exectable", arguments, envp)

@@ -1,13 +1,6 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <sys/wait.h>
+#include "./include/Manager.h"
 
-#include "./include/ls.h"
-#include "./include/manager.h"
 
-//buffer size in a macro to simplify access
-#define INPUT_BUFFER_SIZE (1024 * 4)
 
 
 
